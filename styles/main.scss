@@ -1,0 +1,47 @@
+ /*
+ fonts:
+ font-family: 'Raleway Dots', ;
+font-family: 'Tomorrow', ;
+ */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ //variables
+ $bg:#0339A6;
+
+ body {
+     background-color: $bg;
+     font-family: 'Tomorrow', ;
+
+ }
+
+ .container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     background-color: $bg;
+
+     #code {
+         color: white;
+         font-size: 8em;
+         margin: 0;
+         font-family: 'Tomorrow', ;
+         svg{
+             fill:gray;
+         }
+     }
+
+     #keyname {
+         color: #efefef;
+         font-family: 'Raleway Dots', ;
+         opacity: .8;
+         font-size: medium;
+     }
+ }
