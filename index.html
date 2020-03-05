@@ -6,16 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Raleway+Dots|Tomorrow&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
-    <title>Key codes</title>
+    <title>Key code</title>
 </head>
 
 <body>
-    <div class="container" title="Press any key">
-        <div id="code" title="keycode">00
-           
-        </div>
-        <div id="keyname" title="key-name">Name of the key pressed</div>
+    <div class="container">
+        <input type="text" id="inp">
+        <div id="code">00</div>
+        <div id="keyname">Name of the key pressed</div>
+        <button onclick='copy_key()' class="copy">copy</button>
     </div>
+
+    <!-- popup message -->
+    <span>
+        <div class="msg">Message</div>
+    </span>
+
+    <!-- footer -->
+    <footer> <b>Note : </b> Click <i>copy</i> or <i>double click</i> to copy keycode !</footer>
     <script src="./scripts/main.js"></script>
 </body>
 

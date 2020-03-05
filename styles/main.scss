@@ -10,12 +10,12 @@ font-family: 'Tomorrow', ;
  }
 
  //variables
- $bg:#0339A6;
+ $bg:#2c3e50; //#0339A6;
+ $yellow: #f1c40f;
 
  body {
      background-color: $bg;
      font-family: 'Tomorrow', ;
-
  }
 
  .container {
@@ -28,14 +28,15 @@ font-family: 'Tomorrow', ;
      height: 100%;
      background-color: $bg;
 
+     input {
+         display: none;
+     }
+
      #code {
          color: white;
          font-size: 8em;
          margin: 0;
          font-family: 'Tomorrow', ;
-         svg{
-             fill:gray;
-         }
      }
 
      #keyname {
@@ -44,4 +45,96 @@ font-family: 'Tomorrow', ;
          opacity: .8;
          font-size: medium;
      }
+
+     button {
+         box-sizing: border-box;
+         appearance: none;
+         background-color: transparent;
+         border: 2px solid $yellow;
+         border-radius: 6px;
+         color: white;
+         cursor: pointer;
+         display: flex;
+         align-self: center;
+         font-size: medium;
+         line-height: 1;
+         margin: 24px;
+         padding: 10px 28px;
+         text-decoration: none;
+         text-align: center;
+         text-transform: uppercase;
+         outline: none;
+         user-select: none;
+     }
+
+     .copy {
+         border-color: $yellow;
+
+         background: {
+             image: linear-gradient(45deg, $yellow 50%, transparent 50%);
+             position: 100%;
+             size: 400%;
+         }
+
+         transition: 300ms ease-in-out;
+
+         &:hover {
+             background-position: 0;
+         }
+
+         &:active {
+             transform: scale(0.85);
+         }
+     }
+ }
+
+ span {
+     width: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: center;
+     align-items: center;
+ }
+
+ .msg {
+     width: auto;
+     height: auto;
+     display: flex;
+     padding: 10px 25px;
+     border-radius: 30px;
+     position: absolute;
+     flex-direction: row;
+     justify-content: space-around;
+     align-items: center;
+     background: $yellow;
+     z-index: 100;
+     color: white;
+     top: 0;
+     visibility: hidden;
+     user-select: none;
+ }
+
+ @keyframes pop {
+     0% {
+         visibility: visible;
+     }
+
+     30% {
+         transform: translateY(10vh);
+     }
+
+     86% {
+         transform: translateY(10vh);
+     }
+ }
+
+ footer {
+     position: fixed;
+     z-index: 100;
+     bottom: 0;
+     left: 0;
+     color: white;
+     margin: 6px;
+     font-size: x-small;
  }
